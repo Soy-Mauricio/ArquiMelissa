@@ -12,7 +12,7 @@ const Footer = () => {
     },
     {
       title: "SOBRE MI",
-      links: ["Arquitectura", "Visión", "Proyectos", "Certificaciones"],
+      links: ["Arquitectura", "Visión"],
     },
     {
       title: "SERVICIOS",
@@ -42,7 +42,7 @@ const Footer = () => {
               </button>
               {/* Contenido desplegable */}
               <ul
-                className={`overflow-hidden transition-all duration-300 ${
+                className={`overflow-hidden transition-all duration-700 ${
                   openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
       </div>
       {/* Derechos reservados */}
-      <div className="lg:mt-80 md:mt-60 mt-20 text-center text-gray-600 text-sm">
+      <div className="lg:mt-60 md:mt-60 mt-20 text-center text-gray-600 text-sm">
         © 2025 Melissa Castro. Todos los derechos reservados.
       </div>
     </footer>

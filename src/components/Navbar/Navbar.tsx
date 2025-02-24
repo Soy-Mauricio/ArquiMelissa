@@ -8,21 +8,38 @@ export default function Navbar() {
   const sections = [
     {
       title: "PROYECTOS",
-      links: ["melissa@gmail.com", "+57 3202232882"],
-    },
-    {
-      title: "SOBRE MI",
-      links: ["Instagram", "Linkedin", "Facebook"],
+      links: [
+        { name: "Interiores", path: "/interiores" },
+        { name: "Comerciales", path: "/comerciales" },
+      ],
     },
     {
       title: "SERVICIOS",
-      links: ["Arquitectura", "Visión", "Proyectos", "Certificaciones"],
+      links: [
+        { name: "Diseño Arquitectónico", path: "/diseno-arquitectonico" },
+        { name: "Visualización Arquitectónica", path: "/visualizacion" },
+        { name: "Arquitectura Sostenible", path: "/sostenible" },
+        { name: "Arquitectura Digital", path: "/digital" },
+      ],
+    },
+    {
+      title: "INFORMACIÓN",
+      links: [
+        { name: "Trayectoria", path: "/Information" },
+        { name: "Arquitectura", path: "/arquitectura" },
+        { name: "Visión", path: "/vision" },
+        { name: "Proyectos", path: "/proyectos" },
+        { name: "Certificaciones", path: "/certificaciones" },
+      ],
     },
     {
       title: "CONTACTO",
-      links: ["Diseño Arquitectónico", "Visualización Arquitectónica", "Sostenibilidad", "BIM"],
+      links: [
+        { name: "+57 3202232882", path: "#" },
+        { name: "melissa@gmail.com", path: "#" },
+      ],
     },
-  ];
+  ];  
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleSubMenu = (menu: string) =>
@@ -32,8 +49,8 @@ export default function Navbar() {
     <header className="relative w-full">
       <nav className="w-full">
         {/* Logo centrado */}
-        <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
-          <Link to="/home" className="text-2xl font-bold">MELISSA</Link>
+        <div className="lg:hidden absolute top-4 left-4">
+          <Link to="/home" className="text-2xl font-bold flex">MELISSA</Link>
         </div>
 
         {/* Menú de navegación */}
@@ -42,7 +59,7 @@ export default function Navbar() {
             isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
           }`}
         >
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 py-6">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 py-6 lg:mt-8">
             {/* Logo centrado en pantallas grandes */}
             <div className="hidden lg:flex justify-center w-full mb-4">
               <Link to="/home" className="text-2xl font-bold">MELISSA-ARQ</Link>
@@ -61,19 +78,20 @@ export default function Navbar() {
 
                 {/* Contenido desplegable */}
                 <div
-                  className={`overflow-hidden transition-all duration-500 ${
+                  className={`overflow-hidden transition-all duration-700 ${
                     openSubMenu === section.title ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
                   }`}
                 >
                   <div className="flex flex-col mt-2 space-y-2 px-6">
                     {section.links.map((link, index) => (
-                      <a
+                      <Link
                         key={index}
-                        href="#"
-                        className="text-gray-300 lg:text-gray-600 hover:text-white lg:hover:text-black"
+                        to={link.path}
+                        className="text-gray-300 lg:text-gray-600 hover:text-white lg:hover:text-black flex justify-start"
+                        onClick={() => setIsOpen(false)} // Cerrar el menú al hacer clic
                       >
-                        {link}
-                      </a>
+                        {link.name}
+                      </Link>
                     ))}
                   </div>
                 </div>
