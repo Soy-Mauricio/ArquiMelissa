@@ -3,20 +3,20 @@ import { useState } from "react";
 const Footer = () => {
   const sections = [
     {
-      title: "Contacto",
-      links: ["+57 3142654949", "melisa@gmail.com", "Blog", "Contacto"],
+      title: "CONTACTO",
+      links: ["melissa@gmail.com", "+57 3202232882"],
     },
     {
-      title: "Productos",
-      links: ["Planes", "Precios", "Testimonios", "Integraciones"],
+      title: "SOCIAL",
+      links: ["Instagram", "Linkedin", "Facebook"],
     },
     {
-      title: "Soporte",
-      links: ["Centro de Ayuda", "FAQs", "Guías", "Reportar un Problema"],
+      title: "SOBRE MI",
+      links: ["Arquitectura", "Visión"],
     },
     {
-      title: "Legal",
-      links: ["Términos de Servicio", "Política de Privacidad", "Cookies"],
+      title: "SERVICIOS",
+      links: ["Diseño Aruitectónico", "Visualización Arquitectónica", "Sostenibilidad", "BIM"],
     },
   ];
 
@@ -27,28 +27,27 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white py-8 px-4">
+    <footer className="py-8 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {sections.map((section, index) => (
             <div key={index}>
-              {/* Encabezado con botón desplegable */}
+              {/* Título y botón "+" */}
               <button
-                className="w-full text-left text-lg font-semibold py-2 md:py-0"
+                className="w-full md:w-auto inline-flex items-center gap-2 text-base font-semibold py-2 text-black cursor-pointer hover:opacity-100"
                 onClick={() => toggleSection(index)}
               >
                 {section.title}
+                <span className="text-xl">{openIndex === index ? "−" : "+"}</span>
               </button>
-              {/* Contenido desplegable en móvil / siempre visible en desktop */}
+              {/* Contenido desplegable */}
               <ul
-                className={`overflow-hidden transition-all duration-300 md:block ${
-                  openIndex === index
-                    ? "max-h-40 opacity-100"
-                    : "max-h-0 opacity-0 md:opacity-100 md:max-h-none"
+                className={`overflow-hidden transition-all duration-700 ${
+                  openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
                 }`}
               >
                 {section.links.map((link, i) => (
-                  <li key={i} className="py-1 text-gray-400 hover:text-white">
+                  <li key={i} className="py-1 text-gray-600 hover:text-black">
                     <a href="#">{link}</a>
                   </li>
                 ))}
@@ -56,6 +55,10 @@ const Footer = () => {
             </div>
           ))}
         </div>
+      </div>
+      {/* Derechos reservados */}
+      <div className="lg:mt-60 md:mt-60 mt-20 text-center text-gray-600 text-sm">
+        © 2025 Melissa Castro. Todos los derechos reservados.
       </div>
     </footer>
   );
