@@ -1,31 +1,70 @@
+import { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const images = [
-  "/src/assets/img/Imagen-Cinco.webp",
-  "/src/assets/img/Imagen-Cuatro.webp",
-  "/src/assets/img/Imagen-Tres.webp",
+const slides = [
+  {
+    image: "/src/assets/img/Imagen-Uno.webp",
+    title: "Edificio Coporativo",
+    description: "Un edificio con diseño vanguardista y tecnología eficiente. ",
+  },
+  {
+    image: "/src/assets/img/Imagen-Cuatro.webp",
+    title: "Diseño de Interiores",
+    description: "Diseño innovador para un centro comercial ecológico centro comercial ecológico.",
+  },
+  {
+    image: "/src/assets/img/Imagen-Tres.webp",
+    title: "Proyecto Residencial",
+    description: "Este es un proyecto de vivienda moderna con diseño sostenible.",
+  },
 ];
 
 export default function ImageSlider() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   const settings = {
-    dots: true, // Muestra los indicadores de posición
-    infinite: true, // Permite que el carrusel sea infinito
-    speed: 500, // Velocidad de transición en ms
-    slidesToShow: 2, // Número de imágenes visibles
-    slidesToScroll: 1, // Número de imágenes a avanzar
-    autoplay: true, // Activar el cambio automático
-    autoplaySpeed: 5000, // Cambio cada 5 segundos
-    arrows: true, // Flechas de navegación
+    dots: false, // Oculta los indicadores de posición (puntos debajo del carrusel)
+    infinite: true, // Permite que el carrusel haga un loop infinito
+    speed: 300, // Velocidad de la transición entre slides (en milisegundos)
+    slidesToShow: 2, // Número de slides visibles al mismo tiempo
+    slidesToScroll: 1, // Número de slides que se desplazan por cada cambio
+    autoplay: true, // Activa el desplazamiento automático de los slides
+    autoplaySpeed: 5000, // Tiempo en milisegundos entre cada cambio automático de slide
+    arrows: false, // Oculta las flechas de navegación del carrusel
+  };  
+
+  const toggleDescription = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto mt-10">
+    <div className="w-full max-w-4xl mt-10">
       <Slider {...settings}>
-        {images.map((img, index) => (
-          <div key={index} className="w-[200px] h-[250px] px-2">
-            <img src={img} alt={`Slide ${index + 1}`} className="w-full h-auto object-cover" />
+        {slides.map((slide, index) => (
+          <div key={index} className="w-full slick-slide lg:pr-6 lg:ml-0.5 ">
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="w-full h-[250px] object-cover cursor-pointer"
+              draggable="false"
+            />
+            <div className="text-center mt-3 flex flex-col justify-start">
+              <button
+                className="cursor-pointer text-lg font-semibold text-gray-800 flex justify-start items-center w-full"
+                onClick={() => toggleDescription(index)}
+              >
+                {slide.title} <span className="ml-2 text-2xl">{openIndex === index ? "−" : "+"}</span>
+              </button>
+              <div
+                className={`transition-all duration-500 overflow-hidden ${
+                  openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                <p className="text-gray-600 mt-2 text-start h-auto">{slide.description}</p>
+              </div>
+            </div>
           </div>
         ))}
       </Slider>
