@@ -3,37 +3,37 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const slides = [
-  {
-    image: "/src/assets/img/Imagen-Uno.webp",
-    title: "Edificio Coporativo",
-    description: "Un edificio con diseño vanguardista y tecnología eficiente. ",
-  },
-  {
-    image: "/src/assets/img/Imagen-Cuatro.webp",
-    title: "Diseño de Interiores",
-    description: "Diseño innovador para un centro comercial ecológico centro comercial ecológico.",
-  },
-  {
-    image: "/src/assets/img/Imagen-Tres.webp",
-    title: "Proyecto Residencial",
-    description: "Este es un proyecto de vivienda moderna con diseño sostenible.",
-  },
-];
+interface Slide {
+  image: string;
+  title: string;
+  description: string;
+}
 
-export default function ImageSlider() {
+interface ImageSliderProps {
+  slides: Slide[];
+}
+
+export default function ImageSlider({ slides }: ImageSliderProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const settings = {
-    dots: false, // Oculta los indicadores de posición (puntos debajo del carrusel)
-    infinite: true, // Permite que el carrusel haga un loop infinito
-    speed: 300, // Velocidad de la transición entre slides (en milisegundos)
-    slidesToShow: 2, // Número de slides visibles al mismo tiempo
-    slidesToScroll: 1, // Número de slides que se desplazan por cada cambio
-    autoplay: true, // Activa el desplazamiento automático de los slides
-    autoplaySpeed: 5000, // Tiempo en milisegundos entre cada cambio automático de slide
-    arrows: false, // Oculta las flechas de navegación del carrusel
-  };  
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768, // Para pantallas menores a 768px (tablets y celulares)
+        settings: {
+          slidesToShow: 1, // Solo se muestra 1 imagen en celulares
+        },
+      },
+    ],
+  };
 
   const toggleDescription = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -43,7 +43,7 @@ export default function ImageSlider() {
     <div className="w-full max-w-4xl mt-10">
       <Slider {...settings}>
         {slides.map((slide, index) => (
-          <div key={index} className="w-full slick-slide lg:pr-6 lg:ml-0.5 ">
+          <div key={index} className="w-full slick-slide md:pr-6 md:ml-0.5">
             <img
               src={slide.image}
               alt={slide.title}
@@ -55,7 +55,7 @@ export default function ImageSlider() {
                 className="cursor-pointer text-lg font-semibold text-gray-800 flex justify-start items-center w-full"
                 onClick={() => toggleDescription(index)}
               >
-                {slide.title} <span className="ml-2 text-2xl">{openIndex === index ? "−" : "+"}</span>
+                {slide.title} <span className="h-full ml-2 text-2xl">{openIndex === index ? "−" : "+"}</span>
               </button>
               <div
                 className={`transition-all duration-500 overflow-hidden ${
