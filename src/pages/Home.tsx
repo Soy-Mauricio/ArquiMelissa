@@ -13,7 +13,7 @@ const Home: React.FC = () => {
 
   return (
     <MainLayout>
-      <div className="container mx-auto p-4 lg:mt-10 mt-20">
+      <div className="mx-auto p-4 lg:mt-10 mt-20">
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-1">
           {images.map((image) => (
             <div key={image.id} className="mb-1 break-inside-avoid">

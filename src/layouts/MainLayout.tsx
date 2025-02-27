@@ -10,7 +10,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   return (
     <section className="padre flex flex-col lg:flex-row min-h-screen max-w-[1200px] mx-auto w-full">
       {/* Navbar fijo a la izquierda en pantallas grandes */}
-      <div className="w-full lg:w-[250px] flex-shrink-0">
+      <div className="w-full lg:w-[250px] flex-shrink-0 mr-4">
         <Navbar />
       </div>
 
@@ -22,7 +22,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           </main>
         </section>
 
-        <section className="hijo-dos">
+        <section className="lg:mt-20 lg:ml-0 md:ml-10">
           {/* Footer abajo */}
           <Footer />
         </section>

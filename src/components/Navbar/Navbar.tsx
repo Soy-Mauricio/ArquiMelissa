@@ -9,6 +9,7 @@ export default function Navbar() {
     {
       title: "PROYECTOS",
       links: [
+        { name: "Todos", path: "/interiores" },
         { name: "Interiores", path: "/interiores" },
         { name: "Comerciales", path: "/comerciales" },
       ],
@@ -25,10 +26,9 @@ export default function Navbar() {
     {
       title: "INFORMACIÓN",
       links: [
-        { name: "Trayectoria", path: "/Information" },
-        { name: "Arquitectura", path: "/arquitectura" },
-        { name: "Visión", path: "/vision" },
-        { name: "Proyectos", path: "/proyectos" },
+        { name: "Trayectoria", path: "/Information#trayectoria" },
+        { name: "Arquitectura", path: "/Information#arquitectura" },
+        { name: "Visión", path: "/Information#vision" },
         { name: "Certificaciones", path: "/certificaciones" },
       ],
     },
@@ -55,11 +55,11 @@ export default function Navbar() {
 
         {/* Menú de navegación */}
         <div
-          className={`fixed top-0 left-0 w-full h-full bg-black lg:w-[250px] lg:h-full lg:fixed lg:left-0 lg:top-0 lg:bg-white lg:shadow-lg lg:translate-x-0 z-50 transform transition-transform duration-700 ease-in-out flex justify-center items-center lg:block ${
-            isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
-          }`}
+          className={`fixed top-0 left-0 w-full h-full bg-black 
+            lg:w-auto lg:h-auto lg:relative lg:bg-white z-50 transform transition-transform duration-700 ease-in-out flex justify-center items-center lg:block 
+            ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}
         >
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 py-6 lg:mt-8">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 lg:mt-12">
             {/* Logo centrado en pantallas grandes */}
             <div className="hidden lg:flex justify-center w-full mb-4">
               <Link to="/home" className="text-2xl font-bold">MELISSA-ARQ</Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
                       <Link
                         key={index}
                         to={link.path}
-                        className="text-gray-300 lg:text-gray-600 hover:text-white lg:hover:text-black flex justify-start"
+                        className="text-gray-300 lg:text-gray-700 hover:text-white lg:hover:text-black flex justify-start"
                         onClick={() => setIsOpen(false)} // Cerrar el menú al hacer clic
                       >
                         {link.name}
