@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ScrollToTop from './layouts/Scroll';
 import Home from './pages/Home';
 import Information from './pages/Information';
+import Proyects from './pages/Proyects';
 
 const App: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/information" element={<Information />} />
+        <Route path="/proyects" element={<Proyects />} />
       </Routes>
     </Router>
   );
