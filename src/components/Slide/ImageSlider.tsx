@@ -40,7 +40,7 @@ export default function ImageSlider({ slides }: ImageSliderProps) {
   };
 
   return (
-    <div className="w-full max-w-4xl mt-10">
+    <div className="w-full max-w-3xl mt-10">
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <div key={index} className="w-full slick-slide md:pr-6 md:ml-0.5">

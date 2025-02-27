@@ -7,7 +7,7 @@ interface InfoProps {
     return (
 
         <div className="flex flex-col">
-            <div className="lg:mt-0 mt-20">
+            <div className="mt-20">
                 <h1 className="font-light lg:text-6xl md:text-6xl text-4xl">{title}</h1>
             </div>
     

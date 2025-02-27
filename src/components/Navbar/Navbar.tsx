@@ -9,6 +9,7 @@ export default function Navbar() {
     {
       title: "PROYECTOS",
       links: [
+        { name: "Todos", path: "/interiores" },
         { name: "Interiores", path: "/interiores" },
         { name: "Comerciales", path: "/comerciales" },
       ],
@@ -25,10 +26,9 @@ export default function Navbar() {
     {
       title: "INFORMACIÓN",
       links: [
-        { name: "Trayectoria", path: "/Information" },
-        { name: "Arquitectura", path: "/arquitectura" },
-        { name: "Visión", path: "/vision" },
-        { name: "Proyectos", path: "/proyectos" },
+        { name: "Trayectoria", path: "/Information#trayectoria" },
+        { name: "Arquitectura", path: "/Information#arquitectura" },
+        { name: "Visión", path: "/Information#vision" },
         { name: "Certificaciones", path: "/certificaciones" },
       ],
     },
@@ -59,7 +59,7 @@ export default function Navbar() {
             lg:w-auto lg:h-auto lg:relative lg:bg-white z-50 transform transition-transform duration-700 ease-in-out flex justify-center items-center lg:block 
             ${isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}
         >
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 py-6 lg:mt-8">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 lg:mt-12">
             {/* Logo centrado en pantallas grandes */}
             <div className="hidden lg:flex justify-center w-full mb-4">
               <Link to="/home" className="text-2xl font-bold">MELISSA-ARQ</Link>
