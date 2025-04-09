@@ -5,6 +5,7 @@ import ScrollToTop from './layouts/Scroll';
 import Home from './pages/Home';
 import Information from './pages/Information';
 import Proyects from './pages/Proyects';
+import Services from './pages/Services';
 
 const App: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/information" element={<Information />} />
         <Route path="/proyects" element={<Proyects />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
     </Router>
   );

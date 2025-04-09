@@ -96,6 +96,19 @@ const Information: React.FC = () => {
 
           <ImageSlider slides={slidesTwo} />
         </div>
+
+        <div id="certificados">
+          <Info
+              title="CERTIFICADOS"
+              content={[
+              "He complementado mi formación profesional con una serie de certificaciones que respaldan mis conocimientos y habilidades en el campo de la arquitectura. Entre ellas se destacan cursos especializados en diseño estructural, normativas urbanísticas, sostenibilidad y modelado 3D (BIM). Estas certificaciones han sido otorgadas por la universidad UNIMETA y han fortalecido mi capacidad para abordar proyectos arquitectónicos con enfoque técnico, estético y funcional.",
+              ]}
+          />
+
+          <div className="mt-20">
+            <img src="/src/assets/img/Certificados.webp" alt="" />
+          </div>
+        </div>
       </section>
 
     </MainLayout>

@@ -12,16 +12,17 @@ export default function Navbar() {
         { name: "Todos", path: "/Proyects#todos" },
         { name: "Interiores", path: "/interiores" },
         { name: "Comerciales", path: "/comerciales" },
-        { name: "Culturales", path: "/culturales" },
+        { name: "Viviendas", path: "/culturales" },
       ],
     },
     {
       title: "SERVICIOS",
       links: [
-        { name: "Diseño Arquitectónico", path: "/diseno-arquitectonico" },
-        { name: "Visualización Arquitectónica", path: "/visualizacion" },
-        { name: "Arquitectura Sostenible", path: "/sostenible" },
-        { name: "Arquitectura Digital", path: "/digital" },
+        { name: "Todos", path: "/Services" },
+        { name: "Diseño Arquitectónico", path: "/Services#arquitectonico" },
+        { name: "Visualización Arquitectónica", path: "/Services#visualizacion" },
+        { name: "Arquitectura Sostenible", path: "/Services#sostenibilidad" },
+        { name: "Arquitectura Digital", path: "/Services#bim" },
       ],
     },
     {
@@ -30,7 +31,7 @@ export default function Navbar() {
         { name: "Trayectoria", path: "/Information#trayectoria" },
         { name: "Arquitectura", path: "/Information#arquitectura" },
         { name: "Visión", path: "/Information#vision" },
-        { name: "Certificaciones", path: "/certificaciones" },
+        { name: "Certificaciones", path: "/Information#certificados" },
       ],
     },
     {
