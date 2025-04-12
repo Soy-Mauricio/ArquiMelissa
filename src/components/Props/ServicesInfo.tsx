@@ -20,4 +20,4 @@ interface ServiceInfoProps {
     );
   };
   
-  export default ServiceInfo;
+export default ServiceInfo;

@@ -6,19 +6,19 @@ import Info from "../components/Props/SectInformation";
 
 const slidesOne = [
     {
-      image: "/src/assets/img/Imagen-Uno.webp",
+      image: "/src/assets/img/Interiores.webp",
       title: "Interiores",
-      description: "Un edificio con diseño vanguardista y tecnología eficiente.",
+      description: "Transformamos espacios interiores en ambientes armoniosos y funcionales, cuidando cada detalle para reflejar tu personalidad y mejorar tu calidad de vida.",
     },
     {
-      image: "/src/assets/img/Imagen-Cuatro.webp",
+      image: "/src/assets/img/Comercial.webp",
       title: "Comerciales",
-      description: "Diseño innovador para un centro comercial ecológico.",
+      description: "Diseñamos espacios comerciales únicos, funcionales y personalizados, que potencian la identidad de tu marca y mejoran la experiencia de tus clientes, combinando estrategia, estética y eficiencia.",
     },
     {
-      image: "/src/assets/img/Imagen-Tres.webp",
+      image: "/src/assets/img/Vivienda.webp",
       title: "Viviendas",
-      description: "Este es un proyecto de vivienda moderna con diseño sostenible.",
+      description: "Creamos espacios residenciales únicos, funcionales y personalizados, que se adaptan al estilo de vida y necesidades de cada cliente, combinando estética, confort y sostenibilidad.",
     },
   ];
   
@@ -46,8 +46,9 @@ const Proyects: React.FC = () => {
           <Info
               title="PROYECTOS"
               content={[
-              "Asumo la creación de espacios social, económica y ambientalmente equilibrados como un objetivo esencial en mi trabajo como arquitecta. Considero que la arquitectura no debe limitarse únicamente a la expresión artística o a la eficiencia técnica, sino que debe ser el punto de encuentro entre ambos enfoques. Tradicionalmente, la disciplina se ha visto dominada por dos extremos: uno altamente expresivo y vanguardista, pero muchas veces costoso e irrealista, y otro estrictamente funcional y racional, que aunque práctico, puede carecer de ambición e inspiración.",
-              "Cada proyecto es una oportunidad para innovar y encontrar soluciones que no solo respondan a las necesidades del presente, sino que también sean sostenibles a largo plazo. Me motiva diseñar espacios que inspiren, que reflejen identidad y que mejoren la calidad de vida de las personas. Para mí, la arquitectura no es solo una disciplina técnica, sino una herramienta de transformación que puede dar forma a ciudades más humanas, eficientes y armónicas con su contexto.",
+              "En esta sección, comparto algunos de los proyectos más representativos y transformadores que he tenido el privilegio de desarrollar a lo largo de mi carrera en arquitectura. Cada uno de estos proyectos es una representación de mi compromiso por crear soluciones innovadoras y funcionales, siempre considerando las necesidades específicas de los clientes y los entornos en los que se insertan. Mi enfoque busca equilibrar la estética con la sostenibilidad, asegurando que cada espacio no solo sea visualmente atractivo, sino también eficiente, accesible y en armonía con su contexto.",
+
+              "A lo largo de mi trayectoria, he trabajado en una variedad de proyectos, desde viviendas unifamiliares y diseños comerciales. Cada desafío me ha permitido explorar nuevas técnicas, materiales y enfoques de diseño, siempre con el objetivo de mejorar la calidad de vida de las personas que habitarán o interactuarán con esos espacios."
               ]}
           />
 

@@ -20,5 +20,4 @@ interface InfoProps {
     );
   };
   
-  export default Info;
-  
+export default Info;

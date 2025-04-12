@@ -22,7 +22,7 @@ export default function Navbar() {
         { name: "Diseño Arquitectónico", path: "/Services#arquitectonico" },
         { name: "Visualización Arquitectónica", path: "/Services#visualizacion" },
         { name: "Arquitectura Sostenible", path: "/Services#sostenibilidad" },
-        { name: "Arquitectura Digital", path: "/Services#bim" },
+        { name: "Consultoria", path: "/Services#consultoria" },
       ],
     },
     {
@@ -39,6 +39,7 @@ export default function Navbar() {
       links: [
         { name: "+57 3202232882", path: "#" },
         { name: "melissa@gmail.com", path: "#" },
+        { name: "Agendar Cita", path: "#" },
       ],
     },
   ];  
@@ -63,7 +64,7 @@ export default function Navbar() {
         >
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 lg:mt-12">
             {/* Logo centrado en pantallas grandes */}
-            <div className="hidden lg:flex justify-center w-full mb-4">
+            <div className="hidden lg:flex justify-center w-full mb-8">
               <Link to="/home" className="text-2xl font-bold">MELISSA-ARQ</Link>
             </div>
 
