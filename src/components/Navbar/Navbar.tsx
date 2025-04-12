@@ -9,18 +9,20 @@ export default function Navbar() {
     {
       title: "PROYECTOS",
       links: [
-        { name: "Todos", path: "/interiores" },
+        { name: "Todos", path: "/Proyects#todos" },
         { name: "Interiores", path: "/interiores" },
         { name: "Comerciales", path: "/comerciales" },
+        { name: "Viviendas", path: "/culturales" },
       ],
     },
     {
       title: "SERVICIOS",
       links: [
-        { name: "Diseño Arquitectónico", path: "/diseno-arquitectonico" },
-        { name: "Visualización Arquitectónica", path: "/visualizacion" },
-        { name: "Arquitectura Sostenible", path: "/sostenible" },
-        { name: "Arquitectura Digital", path: "/digital" },
+        { name: "Todos", path: "/Services" },
+        { name: "Diseño Arquitectónico", path: "/Services#arquitectonico" },
+        { name: "Visualización Arquitectónica", path: "/Services#visualizacion" },
+        { name: "Arquitectura Sostenible", path: "/Services#sostenibilidad" },
+        { name: "Consultoria", path: "/Services#consultoria" },
       ],
     },
     {
@@ -29,7 +31,7 @@ export default function Navbar() {
         { name: "Trayectoria", path: "/Information#trayectoria" },
         { name: "Arquitectura", path: "/Information#arquitectura" },
         { name: "Visión", path: "/Information#vision" },
-        { name: "Certificaciones", path: "/certificaciones" },
+        { name: "Certificaciones", path: "/Information#certificados" },
       ],
     },
     {
@@ -37,6 +39,7 @@ export default function Navbar() {
       links: [
         { name: "+57 3202232882", path: "#" },
         { name: "melissa@gmail.com", path: "#" },
+        { name: "Agendar Cita", path: "#" },
       ],
     },
   ];  
@@ -61,7 +64,7 @@ export default function Navbar() {
         >
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-6 lg:mt-12">
             {/* Logo centrado en pantallas grandes */}
-            <div className="hidden lg:flex justify-center w-full mb-4">
+            <div className="hidden lg:flex justify-center w-full mb-8">
               <Link to="/home" className="text-2xl font-bold">MELISSA-ARQ</Link>
             </div>
 

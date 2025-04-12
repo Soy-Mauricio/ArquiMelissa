@@ -1,44 +1,8 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
-import ImageSlider from "../components/Slide/ImageSlider";
 import Info from "../components/Props/SectInformation";
-
-const slidesOne = [
-    {
-      image: "/src/assets/img/Imagen-Uno.webp",
-      title: "Edificio Corporativo",
-      description: "Un edificio con diseño vanguardista y tecnología eficiente.",
-    },
-    {
-      image: "/src/assets/img/Imagen-Cuatro.webp",
-      title: "Diseño de Interiores",
-      description: "Diseño innovador para un centro comercial ecológico.",
-    },
-    {
-      image: "/src/assets/img/Imagen-Tres.webp",
-      title: "Proyecto Residencial",
-      description: "Este es un proyecto de vivienda moderna con diseño sostenible.",
-    },
-  ];
-  
-  const slidesTwo = [
-    {
-      image: "/src/assets/img/Imagen-Tres.webp",
-      title: "Arquitectura y Sostenibilidad",
-      description: "Espacios de coworking modernos y funcionales.",
-    },
-    {
-      image: "/src/assets/img/Imagen-Cuatro.webp",
-      title: "Inovación y Tecnología",
-      description: "Un hotel de lujo con arquitectura sostenible.",
-    },
-    {
-    image: "/src/assets/img/Imagen-Cuatro.webp",
-    title: "Renovación y Restauración",
-    description: "Un hotel de lujo con arquitectura sostenible.",
-    },
-  ];
+import InfoTrayectory from "../components/Props/ArqVision";
 
 const Information: React.FC = () => {
 
@@ -82,19 +46,35 @@ const Information: React.FC = () => {
               ]}
           />
 
-          <ImageSlider slides={slidesOne} />
+          <InfoTrayectory 
+            img_one="/src/assets/img/Arquitectura.webp"
+            img_two="/src/assets/img/PlanosDos.webp"
+          />
+
         </div>
 
         <div id="vision">
           <Info
               title="VISIÓN"
               content={[
-              "Para mí, la arquitectura es mucho más que diseñar estructuras; es la oportunidad de crear espacios que inspiren, funcionen y mejoren la vida de las personas. Mi visión es desarrollar proyectos donde la estética, la funcionalidad y la sostenibilidad se unan para dar forma a entornos que no solo sean visualmente atractivos, sino también eficientes y perdurables en el tiempo.",
-              "Cada detalle en mis diseños tiene un propósito. Desde la distribución del espacio hasta la elección de materiales, mi enfoque es crear soluciones personalizadas que se adaptan a las necesidades y el estilo de vida de cada cliente. Me apasiona transformar ideas en realidades, ofreciendo espacios que reflejan personalidad, confort y armonía con su entorno. Creo en una arquitectura que cuente historias, que genera emociones y que marca una diferencia. Mi compromiso es diseñar con creatividad y responsabilidad, siempre buscando innovar y aportar valor en cada uno.",
+              "Concibo la arquitectura como una forma de crear espacios que inspiren, funcionen y mejoren la vida de las personas. Busco unir estética, funcionalidad y sostenibilidad en proyectos personalizados que reflejen la identidad del cliente, generen emociones y se integren armónicamente con su entorno. Diseñar con propósito, creatividad y responsabilidad es mi compromiso.",
               ]}
           />
 
-          <ImageSlider slides={slidesTwo} />
+        </div>
+
+        <div id="certificados">
+          <Info
+              title="CERTIFICADOS"
+              content={[
+              "He complementado mi formación profesional con una serie de certificaciones que respaldan mis conocimientos y habilidades en el campo de la arquitectura. Entre ellas se destacan cursos especializados en diseño estructural, normativas urbanísticas, sostenibilidad y modelado 3D (BIM). Estas certificaciones han sido otorgadas por la universidad UNIMETA y han fortalecido mi capacidad para abordar proyectos arquitectónicos con enfoque técnico, estético y funcional.",
+              ]}
+          />
+
+          <div className="mt-20">
+            <img src="/src/assets/img/Certificados.webp" alt="" />
+          </div>
+
         </div>
       </section>
 

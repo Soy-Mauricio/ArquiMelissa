@@ -4,7 +4,7 @@ const Footer = () => {
   const sections = [
     {
       title: "CONTACTO",
-      links: ["melissa@gmail.com", "+57 3202232882"],
+      links: ["melissa@gmail.com", "+57 3202232882", "Agendar Cita"],
     },
     {
       title: "SOCIAL",
@@ -16,7 +16,7 @@ const Footer = () => {
     },
     {
       title: "SERVICIOS",
-      links: ["Diseño Aruitectónico", "Visualización Arquitectónica", "Sostenibilidad", "BIM"],
+      links: ["Diseño Aruitectónico", "Visualización Arquitectónica", "Sostenibilidad", "Consultoria"],
     },
   ];
 
