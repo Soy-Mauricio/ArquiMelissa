@@ -6,3 +6,9 @@ body{
 .slick-slide {
   outline: none !important;
 }
+
+/* Este CSS agranda los dots */
+.slick-dots li button:before {
+  font-size: 12px !important; /* tamaño del punto */
+  margin-top: 10px;
+}
