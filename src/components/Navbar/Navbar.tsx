@@ -10,9 +10,9 @@ export default function Navbar() {
       title: "PROYECTOS",
       links: [
         { name: "Todos", path: "/Proyects#todos" },
-        { name: "Interiores", path: "/interiores" },
-        { name: "Comerciales", path: "/comerciales" },
-        { name: "Viviendas", path: "/culturales" },
+        { name: "Interiores", path: "/Interiors#interiores" },
+        { name: "Comerciales", path: "/Commercial#comerciales" },
+        { name: "Viviendas", path: "/Housing#viviendas" },
       ],
     },
     {
