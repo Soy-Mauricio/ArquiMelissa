@@ -16,9 +16,11 @@ const Proyects: React.FC = () => {
                 arquitecta="Melissa"
                 estado="Finalizado"
                 imagenes={[
-                  "/src/assets/img/Imagen-Tres.webp",
-                  "/src/assets/img/Imagen-Cuatro.webp",
-                  "/src/assets/img/Imagen-Cinco.webp",
+                  "/src/assets/img/DiseñoUno.webp",
+                  "/src/assets/img/DiseñoDos.webp",
+                  "/src/assets/img/DiseñoTres.webp",
+                  "/src/assets/img/DiseñoCuatro.webp",
+                  "/src/assets/img/DiseñoCinco.webp",
                 ]}
                 titulo="INTERIORES"
                 descripcion={["El proyecto consiste en el rediseño interior de un apartamento en el conjunto residencial Amarilo, en Villavicencio, con el objetivo de transformar un espacio convencional en un hogar moderno, funcional y acogedor para una familia joven. Se unificaron las áreas sociales eliminando divisiones innecesarias, lo que permitió una mayor amplitud visual y mejor circulación.",

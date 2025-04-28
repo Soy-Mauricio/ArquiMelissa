@@ -11,8 +11,8 @@ export default function Navbar() {
       links: [
         { name: "Todos", path: "/Proyects#todos" },
         { name: "Interiores", path: "/Interiors#interiores" },
-        { name: "Comerciales", path: "/comerciales" },
-        { name: "Viviendas", path: "/culturales" },
+        { name: "Comerciales", path: "/Commercial#comerciales" },
+        { name: "Viviendas", path: "/Housing#viviendas" },
       ],
     },
     {
